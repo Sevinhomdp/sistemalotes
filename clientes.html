@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang='pt-br'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Clientes</title>
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body data-page='clientes'>
+<div class='app-shell'>
+  <nav class='sidebar'>
+    <h5>Corretora Café</h5><small id='sessionUser'></small><hr>
+    <a href='dashboard.html'>Dashboard</a>
+    <a href='lotes.html'>1. Lotes</a>
+    <a class='active' href='clientes.html'>2. Cadastro de Clientes</a>
+    <a href='fechamento.html'>3. Fechamento</a>
+    <button id='logoutBtn' class='btn btn-sm btn-outline-light mt-3'>Sair</button>
+  </nav>
+
+  <main class='main-content'>
+    <div class='topbar'><h3>2.1 Inclusão / Alteração</h3><button id='novoCliente' class='btn btn-primary no-print'>Novo</button></div>
+    <div class='card p-3 mb-3'><form id='clienteForm'><input type='hidden' id='clienteId'><div class='form-grid'>
+      <div><label>Código</label><input id='codigoCliente' class='form-control' readonly></div><div><label>Razão Social</label><input id='razao' class='form-control' required></div><div><label>Nome Fantasia</label><input id='fantasia' class='form-control'></div><div><label>CNPJ</label><input id='cnpj' class='form-control'></div><div><label>Endereço</label><input id='endereco' class='form-control'></div><div><label>Cidade</label><input id='cidade' class='form-control'></div><div><label>Estado</label><input id='estado' class='form-control'></div><div><label>Telefone</label><input id='telefone' class='form-control'></div><div><label>Email</label><input id='email' class='form-control'></div><div style='grid-column:1/-1'><label>Observações</label><textarea id='observacoes' class='form-control'></textarea></div>
+    </div><button class='btn btn-success mt-2'>Salvar</button></form></div>
+
+    <div class='card p-3'><h5>2.2 / 2.3 / 2.4 Consultas (Código, Nome e CNPJ)</h5><input id='buscaCliente' class='form-control mb-2' placeholder='Consulta por código, nome ou CNPJ'><table class='table table-striped'><thead><tr><th>Código</th><th>Razão</th><th>Fantasia</th><th>CNPJ</th><th>Cidade/UF</th><th>Ações</th></tr></thead><tbody id='clientesTableBody'></tbody></table></div>
+  </main>
+</div>
+<script src='storage.js'></script><script src='utils.js'></script><script src='app.js'></script>
+</body>
+</html>
