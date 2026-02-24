@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='pt-br'>
+<head>
+  <meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Lotes • Corretora de Café</title>
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' rel='stylesheet'>
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body data-page='lotes'>
+<div class='app-shell'>
+  <aside class='sidebar'>
+    <div class='brand'>Corretora de Café</div><div id='sessionUser' class='user-caption'></div>
+    <a class='menu-link' href='dashboard.html'><i class='fa-solid fa-table-columns'></i>Dashboard</a>
+    <a class='menu-link active' href='lotes.html'><i class='fa-solid fa-boxes-stacked'></i>Lotes</a>
+    <a class='menu-link' href='clientes.html'><i class='fa-solid fa-users'></i>Clientes</a>
+    <a class='menu-link' href='fechamento.html'><i class='fa-solid fa-file-signature'></i>Fechamento</a>
+    <button id='logoutBtn' class='btn btn-sm btn-outline-light mt-3'>Sair</button>
+  </aside>
+  <main class='main-content'>
+    <div class='topbar'><div><div class='breadcrumb-wrap'><span>Dashboard</span><i class='fa-solid fa-angle-right'></i><span>Lotes</span></div><h1 class='page-title'>Módulo de lotes</h1></div></div>
+    <div class='module-grid'>
+      <div class='module-card'><h6>Inclusão / Alteração</h6><p>Cadastro completo do lote com classificação COB e imagem.</p><a class='btn btn-sm btn-outline-dark' href='lotes-inclusao.html'>Abrir</a></div>
+      <div class='module-card'><h6>Consulta geral</h6><p>Busca por código cliente, safra e status.</p><a class='btn btn-sm btn-outline-dark' href='lotes-consulta.html'>Abrir</a></div>
+      <div class='module-card'><h6>Baixa de lotes</h6><p>Baixa por intervalo e confirmação antes da ação.</p><a class='btn btn-sm btn-outline-dark' href='lotes-baixa.html'>Abrir</a></div>
+      <div class='module-card'><h6>Baixa por cliente e ano</h6><p>Baixa coletiva com filtro por período.</p><a class='btn btn-sm btn-outline-dark' href='lotes-baixa-ano.html'>Abrir</a></div>
+      <div class='module-card'><h6>Relatórios</h6><p>Filtros e exportações para análise operacional.</p><a class='btn btn-sm btn-outline-dark' href='relatorios.html'>Abrir</a></div>
+      <div class='module-card'><h6>Ligas</h6><p>Montagem de ligas a partir de lotes ativos.</p><a class='btn btn-sm btn-outline-dark' href='ligas.html'>Abrir</a></div>
+      <div class='module-card'><h6>Etiquetas</h6><p>Geração e impressão de etiquetas.</p><a class='btn btn-sm btn-outline-dark' href='etiquetas.html'>Abrir</a></div>
+      <div class='module-card'><h6>Arquivo morto</h6><p>Consulta histórica e eliminação definitiva por perfil.</p><a class='btn btn-sm btn-outline-dark' href='arquivo-morto.html'>Abrir</a></div>
+    </div>
+  </main>
+</div>
+<script src='storage.js'></script><script src='utils.js'></script><script src='app.js'></script>
+</body></html>
